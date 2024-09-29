@@ -1,0 +1,40 @@
+.footer-nav {
+  display: flex;
+  font-family: "DINCondensedRegular";
+  justify-content: center;
+
+  gap: 20px;
+  padding-left: 10%;
+  padding-top: 78px;
+  background-color: rgba(196, 196, 196, 0.3);
+  height: 329px;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1 1;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-heading {
+  font-family: "DINCondensedBold";
+  font-size: 28px;
+  height: 34px;
+}
+
+.list-link {
+  font-family: "Roboto";
+  font-size: 15px;
+  color: rgba(19, 99, 192, 1);
+  height: 29px;
+  transition: all 1s ease-out;
+  &:hover {
+    color: rgba(28, 28, 28, 1);
+  }
+}

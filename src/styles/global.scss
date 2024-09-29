@@ -1,0 +1,42 @@
+@import "nullstyle";
+
+@font-face {
+  font-family: "DINCondensedLight";
+  src: url("../assets/fonts/DINCondensedLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DINCondensedRegular";
+  src: url("../assets/fonts/DINCondensedRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DINCondensedBold";
+  src: url("../assets/fonts/DINCondensedBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
