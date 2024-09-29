@@ -1,4 +1,3 @@
-import './pricing-booking.scss';
 import { FC } from 'react';
 import Pricing from './pricing';
 import Booking from './booking';

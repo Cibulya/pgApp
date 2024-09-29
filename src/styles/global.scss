@@ -35,6 +35,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "SourceSansPro";
+  src: url("../assets/fonts/SourceSansPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 #root {
   display: flex;
   flex-direction: column;

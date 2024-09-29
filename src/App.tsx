@@ -4,6 +4,7 @@ import Header from './components/header/header';
 import MainPage from './pages/mainPage/main-page';
 import ErrorPage from './pages/ErrorPage/error-page';
 import Footer from './components/footer/footer';
+import Overlays from './components/overlays/overlays';
 
 const App: FC = () => {
   return (
