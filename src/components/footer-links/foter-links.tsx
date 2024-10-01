@@ -10,7 +10,7 @@ const FooterLinks: FC<ListsData> = (lists: ListsData) => {
   return (
     <nav className="footer-nav">
       {lists.lists.map((list: FooterLink) => {
-        return <LinksList key={list.name} porps={list} />;
+        return <LinksList key={list.name} props={list} />;
       })}
     </nav>
   );

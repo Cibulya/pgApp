@@ -11,7 +11,7 @@ export interface ListsData {
 }
 
 export interface ListProps {
-  porps: FooterLink;
+  props: FooterLink;
 }
 
 export interface Linktext {

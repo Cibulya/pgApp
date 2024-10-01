@@ -1,0 +1,28 @@
+import { Playgrounds } from '../interfaces/playground';
+
+export const pgMock: Playgrounds = {
+  playgrounds: [
+    {
+      id: 1,
+      is_enable: 1,
+      is_show_on_map: 1,
+      is_published: 1,
+      is_show_sertificate: 1,
+      owner_id: 2,
+      title: 'Magic Island Park',
+      image: '',
+      url: 'somesite.de',
+      address: '1500 Broad Ripple Ave, Indianapolis, IN 46220, USA',
+      discription:
+        'The play area in the Magic Island park is a great place for children and their parents, where everyone can find entertainment to their liking. Located in the shade of the green trees of the park, the play area offers various attractions and activities,The main advantages of the “Magic Island” gaming zone:A variety of attractions: there are trampolines, slides, play complexes, carousels and much more. This allows each child to find something of interest.Safety: All attractions undergo regular inspections, and staff carefully monitor compliance with safety rules. In addition, all equipment meets quality and safety standarts.Convenient location: the play area is located in the center of the park, which makes it accessible to visitors from all corners.Fresh Air: Being outdoors is not only good for your health, but it can also improve your mood.Possibility of holding events: the play area hosts various events (for example, birthdays, master classes) for children of all ages.',
+      inspection_block: 'some inspection',
+      features: {
+        parking: true,
+        camera: true,
+        free_wifi: true,
+        drinking_water: true,
+        pets_allowed: true,
+      },
+    },
+  ],
+};
