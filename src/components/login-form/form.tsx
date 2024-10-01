@@ -13,7 +13,8 @@ const Form: FC = () => {
       pass: '',
     },
   });
-  const onSubmit: SubmitHandler<FormFields> = data => console.log(data);
+
+  const onSubmit: SubmitHandler<FormFields> = data => data;
 
   useEffect(() => {
     if (formState.isSubmitSuccessful) {
@@ -22,7 +23,7 @@ const Form: FC = () => {
         pass: '',
       });
     }
-  }, [formState]);
+  }, [formState, reset]);
 
   return (
     <form

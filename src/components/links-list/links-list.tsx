@@ -1,9 +1,14 @@
 import { FC } from 'react';
-import { ListProps } from '../../text-mocks/footer-mocks/footer-mocks';
+import { FooterLink } from '../../text-mocks/footer-mocks/footer-mocks';
 import LinksLink from './links-link';
 
-const LinksList: FC<ListProps> = (list: ListProps) => {
-  const { name, optionOne, optionTwo, optionFour, optionTree } = list.porps;
+const LinksList: FC<FooterLink> = ({
+  name,
+  optionOne,
+  optionTwo,
+  optionFour,
+  optionTree,
+}: FooterLink) => {
   return (
     <div className="list-container">
       <h2 className="list-heading">{name}</h2>
