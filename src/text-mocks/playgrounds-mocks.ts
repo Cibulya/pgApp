@@ -10,7 +10,8 @@ export const pgMock: Playgrounds = {
       is_show_sertificate: 1,
       owner_id: 2,
       title: 'Magic Island Park',
-      image: '',
+      image:
+        'https://github.com/Cibulya/pgApp/blob/map-feature/src/assets/pg-image/pg_big.png?raw=true',
       url: 'somesite.de',
       address: '1500 Broad Ripple Ave, Indianapolis, IN 46220, USA',
       discription:
