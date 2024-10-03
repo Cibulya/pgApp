@@ -1,18 +1,36 @@
 import './map.scss';
 import { APIProvider, Map } from '@vis.gl/react-google-maps';
+import Marker from '../marker/marker';
+import { OverlayView } from '@react-google-maps/api';
+
+import { useAppSelector } from '../../hooks/redux-hook';
 
 const API_KEY = import.meta.env.VITE_API_KEY;
+const MAP_ID = import.meta.env.VITE_MAP_ID;
 
 const MapComponent = () => {
+  const pins = useAppSelector(state => state.playgr.playgrounds.playgrounds);
   return (
     <APIProvider apiKey={API_KEY}>
       <Map
-        style={{ width: '100%', height: '100%' }}
-        defaultCenter={{ lat: 22.594, lng: 0 }}
-        defaultZoom={10}
+        mapId={MAP_ID}
+        style={{ width: '100%', height: '790px' }}
+        defaultCenter={{ lat: 39.86626326395293, lng: -86.12409681693246 }}
+        defaultZoom={15}
         disableDefaultUI={true}
+        disableDoubleClickZoom={true}
       >
-        Map here
+        {pins.map(pin => (
+          <Marker
+            key={pin.id}
+            gps={pin.gps}
+            id={pin.id}
+            image={pin.image}
+            address={pin.address}
+            title={pin.title}
+            features={pin.features}
+          />
+        ))}
       </Map>
     </APIProvider>
   );

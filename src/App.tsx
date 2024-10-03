@@ -10,6 +10,7 @@ const App: FC = () => {
     <BrowserRouter>
       <Header />
       <Routes>
+        {/* <Route path="/place/:id" element={<MainPage />} /> */}
         <Route path="/" element={<MainPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
