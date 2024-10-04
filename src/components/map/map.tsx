@@ -4,9 +4,14 @@ import {
   Map,
   MapControl,
   ControlPosition,
+  AdvancedMarker,
 } from '@vis.gl/react-google-maps';
+import { mapPresets } from './constants';
 import Marker from '../marker/marker';
 import { useAppSelector } from '../../hooks/redux-hook';
+import { MapControls } from './constants';
+import CustomMapControls from './map-controls';
+import SearchForm from './search-form';
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 const MAP_ID = import.meta.env.VITE_MAP_ID;
@@ -17,8 +22,8 @@ const MapComponent = () => {
     <APIProvider apiKey={API_KEY}>
       <Map
         mapId={MAP_ID}
-        style={{ width: '100%', height: '790px' }}
-        defaultCenter={{ lat: 39.86626326395293, lng: -86.12409681693246 }}
+        style={mapPresets.mapStyle}
+        defaultCenter={mapPresets.center}
         defaultZoom={15}
         disableDefaultUI={true}
         disableDoubleClickZoom={true}
@@ -34,11 +39,12 @@ const MapComponent = () => {
             features={pin.features}
           />
         ))}
-
-        <MapControl position={ControlPosition.BOTTOM_LEFT}>
-          <button>Click</button>
-        </MapControl>
+        <AdvancedMarker position={mapPresets.center}>
+          <img src={MapControls.center} alt="center" />
+        </AdvancedMarker>
+        <CustomMapControls />
       </Map>
+      <SearchForm />
     </APIProvider>
   );
 };

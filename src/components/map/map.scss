@@ -2,3 +2,25 @@
   width: 100%;
   height: 100%;
 }
+
+.map-controls {
+  position: relative;
+}
+
+.center,
+.zoom-out,
+.zoom-in {
+  position: absolute;
+  bottom: 40px;
+}
+
+.center {
+  margin-left: 15vh;
+}
+.zoom-in {
+  margin-left: 21vh;
+}
+
+.zoom-out {
+  margin-left: 27vh;
+}

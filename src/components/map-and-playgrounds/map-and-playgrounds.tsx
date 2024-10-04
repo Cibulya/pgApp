@@ -11,9 +11,6 @@ const MAP_ID = import.meta.env.VITE_MAP_ID;
 const MapAndPlaygrounds = () => {
   return (
     <div className="maps-playgrounds">
-      <form className="test-form" action="submit">
-        <input type="text" placeholder="some text" />
-      </form>
       <MapComponent />
       <PlayGroundsComponent />
     </div>
