@@ -17,6 +17,7 @@ export const pgMock: Playgrounds = {
       discription:
         'The play area in the Magic Island park is a great place for children and their parents, where everyone can find entertainment to their liking. Located in the shade of the green trees of the park, the play area offers various attractions and activities,The main advantages of the “Magic Island” gaming zone:A variety of attractions: there are trampolines, slides, play complexes, carousels and much more. This allows each child to find something of interest.Safety: All attractions undergo regular inspections, and staff carefully monitor compliance with safety rules. In addition, all equipment meets quality and safety standarts.Convenient location: the play area is located in the center of the park, which makes it accessible to visitors from all corners.Fresh Air: Being outdoors is not only good for your health, but it can also improve your mood.Possibility of holding events: the play area hosts various events (for example, birthdays, master classes) for children of all ages.',
       inspection_block: 'some inspection',
+      // 39.87378503804782, -86.1313983949958
       gps: {
         lat: 39.871204752180155,
         lng: -86.13111653862002,
@@ -204,9 +205,10 @@ export const pgMock: Playgrounds = {
       discription:
         'The play area in the Magic Island park is a great place for children and their parents, where everyone can find entertainment to their liking. Located in the shade of the green trees of the park, the play area offers various attractions and activities,The main advantages of the “Magic Island” gaming zone:A variety of attractions: there are trampolines, slides, play complexes, carousels and much more. This allows each child to find something of interest.Safety: All attractions undergo regular inspections, and staff carefully monitor compliance with safety rules. In addition, all equipment meets quality and safety standarts.Convenient location: the play area is located in the center of the park, which makes it accessible to visitors from all corners.Fresh Air: Being outdoors is not only good for your health, but it can also improve your mood.Possibility of holding events: the play area hosts various events (for example, birthdays, master classes) for children of all ages.',
       inspection_block: 'some inspection',
+
       gps: {
-        lat: 39.85870277577092,
-        lng: -86.1265640177024,
+        lat: 39.869766776816036,
+        lng: -86.12920974634656,
       },
       features: [
         {

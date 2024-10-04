@@ -1,8 +1,16 @@
 .maps-playgrounds {
   flex: 1 0 auto;
   display: flex;
+  position: relative;
 }
 
 li {
   list-style: none;
+}
+
+.test-form {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  z-index: 25;
 }

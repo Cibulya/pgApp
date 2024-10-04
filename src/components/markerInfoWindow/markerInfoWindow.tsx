@@ -7,7 +7,6 @@ const MarkerInfoWindow = (
     'image' | 'address' | 'features' | 'title' | 'id'
   >
 ) => {
-  console.log(playground.features);
   return (
     <div className="info-window">
       <img

@@ -1,8 +1,11 @@
 import './map.scss';
-import { APIProvider, Map } from '@vis.gl/react-google-maps';
+import {
+  APIProvider,
+  Map,
+  MapControl,
+  ControlPosition,
+} from '@vis.gl/react-google-maps';
 import Marker from '../marker/marker';
-import { OverlayView } from '@react-google-maps/api';
-
 import { useAppSelector } from '../../hooks/redux-hook';
 
 const API_KEY = import.meta.env.VITE_API_KEY;
@@ -31,6 +34,10 @@ const MapComponent = () => {
             features={pin.features}
           />
         ))}
+
+        <MapControl position={ControlPosition.BOTTOM_LEFT}>
+          <button>Click</button>
+        </MapControl>
       </Map>
     </APIProvider>
   );
