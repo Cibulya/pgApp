@@ -1,8 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
-// Пока не использую)
-// import type { PayloadAction } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
 import type { RootState } from '../store/store';
-import { Playgrounds } from '../../interfaces/playground';
+import { Playground, Playgrounds } from '../../interfaces/playground';
 import { pgMock } from '../../text-mocks/playgrounds-mocks';
 
 interface PgAppStore {
@@ -19,13 +18,19 @@ export const playgroundsSlice = createSlice({
   name: 'playGrounds',
   initialState,
   reducers: {
-    test: state => {
-      console.log(state);
+    findPlaygrouns: (state, payLoad: PayloadAction<string>) => {
+      const pgData: Playground[] = pgMock.playgrounds;
+      const findedData = pgData.filter(
+        e =>
+          e.title.toLowerCase().includes(payLoad.payload.toLowerCase()) ||
+          e.address.toLowerCase().includes(payLoad.payload.toLowerCase())
+      );
+      state.playgrounds.playgrounds = findedData;
     },
   },
 });
 
-export const { test } = playgroundsSlice.actions;
+export const { findPlaygrouns } = playgroundsSlice.actions;
 
 export const playGroundsState = (state: RootState) => state.playgr.playgrounds;
 

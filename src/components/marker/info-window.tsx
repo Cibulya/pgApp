@@ -1,6 +1,7 @@
 import PgFeatures from '../pg-list/gp-fetures';
 import { PGPick } from '../playgrounds/playgrounds';
 import copyIcon from '../../assets/icons/copy.svg';
+
 import './marker.scss';
 
 const CustomInfoWindow = (pg: PGPick) => {

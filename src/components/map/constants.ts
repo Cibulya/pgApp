@@ -19,4 +19,5 @@ export const enum MapControls {
   navToCenter = 'https://raw.githubusercontent.com/Cibulya/pgApp/674452487e22a342c2c68862bfafd6813fa75c7d/src/assets/map-controls/center.svg',
   zoomIn = 'https://raw.githubusercontent.com/Cibulya/pgApp/674452487e22a342c2c68862bfafd6813fa75c7d/src/assets/map-controls/Plus.svg',
   zoomOut = 'https://raw.githubusercontent.com/Cibulya/pgApp/674452487e22a342c2c68862bfafd6813fa75c7d/src/assets/map-controls/Minus.svg',
+  find = 'https://raw.githubusercontent.com/Cibulya/pgApp/8af0d0e518a510a5705ebb2b454c7b24d2e2996f/src/assets/map-controls/find.svg',
 }

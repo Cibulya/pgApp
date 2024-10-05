@@ -1,31 +1,42 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { useEffect } from 'react';
 import { MapControls } from './constants';
+import { useAppDispatch } from '../../hooks/redux-hook';
+import { findPlaygrouns } from '../../redux/slices/playground-slice';
 
 interface SearchFormField {
   address: string;
 }
 
 const SearchForm = () => {
-  const { register, handleSubmit, formState } = useForm<SearchFormField>({
+  const { register, handleSubmit } = useForm<SearchFormField>({
     defaultValues: {
       address: '',
     },
   });
 
-  const onSubmit: SubmitHandler<SearchFormField> = data => data;
+  const dispatch = useAppDispatch();
+
+  const onSubmit: SubmitHandler<SearchFormField> = data => {
+    dispatch(findPlaygrouns(data.address));
+  };
 
   return (
-    <>
-      <form className="search-form" action="submit">
-        <label htmlFor="address">
-          <input type="text" placeholder="some text" name="addres" />
+    <div className="search-form-container">
+      <form className="search-form" onSubmit={handleSubmit(onSubmit)}>
+        <label className="search-form-label" htmlFor="address">
+          <input
+            {...register('address')}
+            className="search-form-input"
+            type="text"
+            placeholder="Search location..."
+            name="address"
+          />
         </label>
-        <button type="submit">
-          <img src="" alt="submit" />
+        <button className="search-form-button" type="submit">
+          <img src={MapControls.find} alt="submit" />
         </button>
       </form>
-    </>
+    </div>
   );
 };
 

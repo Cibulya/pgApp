@@ -1,11 +1,5 @@
 import './map.scss';
-import {
-  APIProvider,
-  Map,
-  MapControl,
-  ControlPosition,
-  AdvancedMarker,
-} from '@vis.gl/react-google-maps';
+import { APIProvider, Map, AdvancedMarker } from '@vis.gl/react-google-maps';
 import { mapPresets } from './constants';
 import Marker from '../marker/marker';
 import { useAppSelector } from '../../hooks/redux-hook';
@@ -21,6 +15,7 @@ const MapComponent = () => {
   return (
     <APIProvider apiKey={API_KEY}>
       <Map
+        className="map"
         mapId={MAP_ID}
         style={mapPresets.mapStyle}
         defaultCenter={mapPresets.center}

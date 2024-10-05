@@ -3,8 +3,8 @@ import { AdvancedMarker, Pin } from '@vis.gl/react-google-maps';
 import { Playground } from '../../interfaces/playground';
 import CustomInfoWindow from './info-window';
 import { useState } from 'react';
-import useOnclickOutside from 'react-cool-onclickoutside';
 import { useAppSelector } from '../../hooks/redux-hook';
+import { useNavigate } from 'react-router-dom';
 
 const Marker = (
   pin: Pick<
@@ -15,17 +15,15 @@ const Marker = (
   const [open, setOpen] = useState<boolean>(false);
   const pgData = useAppSelector(state => state.playgr.playgrounds.playgrounds);
   const singlePG = pgData.find(e => e.id === pin.id) as unknown as Playground;
-  const ref = useOnclickOutside(() => {
-    setOpen(false);
-  });
+  const navigate = useNavigate();
 
-  const handleClickBtn = () => {
-    setOpen(!open);
+  const navigateTo = () => {
+    navigate(`/playgrounds/${pin.id}`);
   };
 
   return (
     <>
-      <AdvancedMarker onClick={handleClickBtn} position={pin.gps}>
+      <AdvancedMarker onClick={() => setOpen(!open)} position={pin.gps}>
         <Pin
           background={'rgba(195, 8, 115, 1)'}
           borderColor={'rgba(255, 255, 255, 1)'}
@@ -33,7 +31,6 @@ const Marker = (
         />
         {open && (
           <AdvancedMarker
-            ref={ref}
             className="info"
             style={{
               backgroundColor: 'white',
@@ -41,20 +38,22 @@ const Marker = (
               borderRadius: '8px',
               width: '440px',
               transform: 'translateY(-60px)',
-              zIndex: '20',
               cursor: 'pointer',
+              zIndex: '100',
             }}
             clickable={true}
-            onClick={() => {}}
+            onClick={navigateTo}
             position={pin.gps}
           >
-            <CustomInfoWindow
-              id={singlePG.id}
-              address={singlePG.address}
-              image={singlePG.image}
-              title={singlePG.title}
-              features={singlePG?.features}
-            ></CustomInfoWindow>
+            <div>
+              <CustomInfoWindow
+                id={singlePG.id}
+                address={singlePG.address}
+                image={singlePG.image}
+                title={singlePG.title}
+                features={singlePG?.features}
+              />
+            </div>
           </AdvancedMarker>
         )}
       </AdvancedMarker>
