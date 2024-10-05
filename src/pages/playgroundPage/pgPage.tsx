@@ -19,6 +19,7 @@ const PgPage = () => {
         image={currentPg.image}
         features={currentPg.features}
         discription={currentPg.discription}
+        title={currentPg.title}
       />
     </>
   );
