@@ -1,8 +1,26 @@
 .mobile-pg-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-pg-container-active {
 }
 
 .mobile-pg-button {
+  min-height: 56px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top: 1px solid gray;
+  background-color: rgba(255, 255, 255, 1);
+  min-width: 100%;
 }
 
 .mobile-pg-list {
 }
+
+// overflow: auto;
+// height: 790px;
+// background-color: #fff;
+// &::-webkit-scrollbar {
+//   width: 0;
+// }

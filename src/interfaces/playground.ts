@@ -19,6 +19,10 @@ export interface Playground {
   };
 }
 
+export interface PlaygroundsArray {
+  playgrounds: Playground[];
+}
+
 export type Feature = {
   title: string;
   img: string;

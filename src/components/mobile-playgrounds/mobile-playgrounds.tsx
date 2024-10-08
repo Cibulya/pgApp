@@ -1,18 +1,32 @@
-import { Playground } from '../../interfaces/playground';
 import './mobile-playgrounds.scss';
-import { FC } from 'react';
+import { PlaygroundsArray } from '../../interfaces/playground';
+import { FC, useState } from 'react';
 import PgListLI from '../pg-list/pg-list-li';
+import { ArrowImages } from '../../text-mocks/playgrounds-security-section';
 
-const MobilePlaygrounds: FC<Playground[]> = playgrounds => {
+const MobilePlaygrounds: FC<PlaygroundsArray> = ({ playgrounds }) => {
+  const [isOpen, setOpen] = useState<boolean>(false);
   return (
-    <div className="mobile-pg-container">
-      <button>
-        <img className="mobile-pg-button" src="" alt="arrow" />
+    <div
+      className={isOpen ? 'mobile-pg-container' : 'mobile-pg-container-active'}
+    >
+      <button
+        className="mobile-pg-button"
+        onClick={() => {
+          setOpen(!isOpen);
+        }}
+      >
+        <img
+          className="mobile-pg-image"
+          src={isOpen ? ArrowImages.up : ArrowImages.down}
+          alt="arrow"
+        />
       </button>
       <ul className="mobile-pg-list">
         {playgrounds.map(playground => {
           return (
             <PgListLI
+              key={playground.id}
               title={playground.title}
               features={playground.features}
               address={playground.address}
