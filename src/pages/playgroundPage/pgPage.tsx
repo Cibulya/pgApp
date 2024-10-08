@@ -9,7 +9,7 @@ const PgPage: FC = () => {
   const { title } = useParams<Pick<Playground, 'title'>>();
 
   const pgs = useAppSelector(
-    state => state.playgr.playgrounds.playgrounds
+    state => state.pgReducer.playgrounds
   ) as unknown as Playground[];
 
   const currentPg = pgs.find(

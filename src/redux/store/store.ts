@@ -3,7 +3,7 @@ import { playgroundsSlice } from '../slices/playground-slice';
 
 export const store = configureStore({
   reducer: {
-    playgr: playgroundsSlice.reducer,
+    pgReducer: playgroundsSlice.reducer,
   },
 });
 

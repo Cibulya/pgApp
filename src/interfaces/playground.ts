@@ -19,18 +19,6 @@ export interface Playground {
   };
 }
 
-export interface Playgrounds {
-  playgrounds: Playground[];
-}
-
-export interface PlaygroundsFeatures {
-  parking: boolean;
-  camera: boolean;
-  free_wifi: boolean;
-  drinking_water: boolean;
-  pets_allowed: boolean;
-}
-
 export type Feature = {
   title: string;
   img: string;

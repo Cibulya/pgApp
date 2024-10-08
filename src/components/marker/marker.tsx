@@ -2,19 +2,20 @@ import './marker.scss';
 import { AdvancedMarker, Pin } from '@vis.gl/react-google-maps';
 import { Playground } from '../../interfaces/playground';
 import CustomInfoWindow from './info-window';
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import { useAppSelector } from '../../hooks/redux-hook';
 import { useNavigate } from 'react-router-dom';
 import { convertTitleToUrl } from '../../utils/convert-title-to-url';
+import { markerStyles, pinStyles } from '../../constants/map-constants';
 
-const Marker = (
-  pin: Pick<
-    Playground,
-    'gps' | 'id' | 'address' | 'image' | 'title' | 'features'
-  >
-) => {
+type MarkerProps = Pick<
+  Playground,
+  'gps' | 'id' | 'address' | 'image' | 'title' | 'features'
+>;
+
+const Marker: FC<MarkerProps> = (pin: MarkerProps) => {
   const [open, setOpen] = useState<boolean>(false);
-  const pgData = useAppSelector(state => state.playgr.playgrounds.playgrounds);
+  const pgData = useAppSelector(state => state.pgReducer.playgrounds);
   const singlePG = pgData.find(e => e.id === pin.id) as unknown as Playground;
   const navigate = useNavigate();
 
@@ -26,22 +27,14 @@ const Marker = (
     <>
       <AdvancedMarker onClick={() => setOpen(!open)} position={pin.gps}>
         <Pin
-          background={'rgba(195, 8, 115, 1)'}
-          borderColor={'rgba(255, 255, 255, 1)'}
-          glyphColor={'white'}
+          background={pinStyles.background}
+          borderColor={pinStyles.borderColor}
+          glyphColor={pinStyles.glyphColor}
         />
         {open && (
           <AdvancedMarker
             className="info"
-            style={{
-              backgroundColor: 'white',
-              border: '0.5px solid rgba(196, 196, 196, 0.3)',
-              borderRadius: '8px',
-              width: '440px',
-              transform: 'translateY(-60px)',
-              cursor: 'pointer',
-              zIndex: '100',
-            }}
+            style={markerStyles}
             clickable={true}
             onClick={navigateTo}
             position={pin.gps}

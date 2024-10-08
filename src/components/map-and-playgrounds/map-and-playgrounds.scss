@@ -2,6 +2,9 @@
   flex: 1 0 auto;
   display: flex;
   position: relative;
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
 }
 
 li {

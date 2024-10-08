@@ -1,3 +1,35 @@
+interface MarkerStyles {
+  backgroundColor: string;
+  border: string;
+  borderRadius: string;
+  width: string;
+  transform: string;
+  cursor: string;
+  zIndex: string;
+}
+
+export const markerStyles: MarkerStyles = {
+  backgroundColor: 'white',
+  border: '0.5px solid rgba(196, 196, 196, 0.3)',
+  borderRadius: '8px',
+  width: '440px',
+  transform: 'translateY(-60px)',
+  cursor: 'pointer',
+  zIndex: '100',
+};
+
+interface PinStyles {
+  background: string;
+  borderColor: string;
+  glyphColor: string;
+}
+
+export const pinStyles: PinStyles = {
+  background: 'rgba(195, 8, 115, 1)',
+  borderColor: 'rgba(255, 255, 255, 1)',
+  glyphColor: 'white',
+};
+
 export interface MapParams {
   center: {
     lat: number;

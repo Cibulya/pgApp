@@ -1,4 +1,3 @@
-import './footer-links.scss';
 import { FC } from 'react';
 import LinksList from '../links-list/links-list';
 import {

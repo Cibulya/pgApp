@@ -12,8 +12,9 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  min-width: fit-content;
   @media (max-width: 640px) {
-    width: 100%;
+    min-width: 100%;
   }
 }
 .issue-form-title {
@@ -41,9 +42,6 @@
     display: flex;
     flex-direction: column;
   }
-}
-
-.issue-image {
 }
 
 .form-subject,

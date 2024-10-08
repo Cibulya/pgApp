@@ -4,10 +4,10 @@ import Booking from './booking';
 
 const PricingBooking: FC = () => {
   return (
-    <>
+    <div className="pricing-booking">
       <Pricing />
       <Booking />
-    </>
+    </div>
   );
 };
 

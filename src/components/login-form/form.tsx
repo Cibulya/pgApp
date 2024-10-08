@@ -64,7 +64,6 @@ const Form: FC = () => {
           name="pass"
         />
       </label>
-
       <input type="submit" value="LOGIN" className="form-submit-input" />
     </form>
   );

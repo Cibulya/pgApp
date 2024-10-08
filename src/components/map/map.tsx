@@ -1,17 +1,17 @@
 import './map.scss';
 import { APIProvider, Map, AdvancedMarker } from '@vis.gl/react-google-maps';
-import { mapPresets } from './constants';
+import { MapControls, mapPresets } from '../../constants/map-constants';
 import Marker from '../marker/marker';
 import { useAppSelector } from '../../hooks/redux-hook';
-import { MapControls } from './constants';
 import CustomMapControls from './map-controls';
 import SearchForm from './search-form';
+import { FC } from 'react';
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 const MAP_ID = import.meta.env.VITE_MAP_ID;
 
-const MapComponent = () => {
-  const pins = useAppSelector(state => state.playgr.playgrounds.playgrounds);
+const MapComponent: FC = () => {
+  const pins = useAppSelector(state => state.pgReducer.playgrounds);
   return (
     <APIProvider apiKey={API_KEY}>
       <Map

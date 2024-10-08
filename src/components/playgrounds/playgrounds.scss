@@ -2,11 +2,18 @@
   display: flex;
   overflow: hidden;
   justify-content: center;
+  @media (max-width: 640px) {
+    flex-direction: column;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid black;
+  }
 }
 
 .pg-list {
   overflow: auto;
   height: 790px;
+  background-color: #fff;
   &::-webkit-scrollbar {
     width: 0;
   }
@@ -66,4 +73,10 @@
   min-width: 40px;
   background-color: #ffffff;
   height: 790px;
+  @media (max-width: 640px) {
+    flex-direction: column;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 56px;
+  }
 }

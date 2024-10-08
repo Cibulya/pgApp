@@ -6,7 +6,7 @@ import { ArrowImages } from '../../text-mocks/playgrounds-security-section';
 
 const BreadCrums: FC = () => {
   const { title } = useParams<{ title: string }>();
-  const all = useAppSelector(state => state.playgr.playgrounds.playgrounds);
+  const all = useAppSelector(state => state.pgReducer.playgrounds);
   const finded = all.find(el => {
     const convertToTitle = title?.replace(/-/g, ' ');
     return el.title.toLocaleLowerCase().includes(convertToTitle as string);

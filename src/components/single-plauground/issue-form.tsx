@@ -2,6 +2,7 @@ import './issue-form.scss';
 import { FC, useState } from 'react';
 import { SecurityFeaturesImages } from '../../text-mocks/playgrounds-security-section';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { emailPattern } from '../../constants/constants';
 
 interface IssueFormFields {
   subject: string;
@@ -16,8 +17,6 @@ const enum PriorityOptions {
   high = 'High',
   low = 'Low',
 }
-
-const emailPattern = /^\S+@\S+\.\S+$/;
 
 const IssueForm: FC = () => {
   const {

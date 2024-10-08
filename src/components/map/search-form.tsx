@@ -1,5 +1,5 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { MapControls } from './constants';
+import { MapControls } from '../../constants/map-constants';
 import { useAppDispatch } from '../../hooks/redux-hook';
 import { findPlaygrouns } from '../../redux/slices/playground-slice';
 
@@ -30,6 +30,7 @@ const SearchForm = () => {
             type="text"
             placeholder="Search location..."
             name="address"
+            id="address"
           />
         </label>
         <button className="search-form-button" type="submit">

@@ -1,8 +1,11 @@
 import { MapControl, ControlPosition, useMap } from '@vis.gl/react-google-maps';
-import { MapControls } from './constants';
-import { mapPresets } from './constants';
+import { MapControls, mapPresets } from '../../constants/map-constants';
+import { FC } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import { mediaQuerias } from '../../constants/mediaquerias';
 
-const CustomMapControls = () => {
+const CustomMapControls: FC = () => {
+  const isMobile = useMediaQuery({ query: mediaQuerias.phone });
   const map = useMap();
   const center = () => {
     map?.setCenter(mapPresets.center);
@@ -25,16 +28,25 @@ const CustomMapControls = () => {
           <img src={MapControls.navToCenter} alt="nav-to-center" />
         </button>
       </MapControl>
-      <MapControl position={ControlPosition.BOTTOM_LEFT}>
-        <button onClick={zoomIn}>
-          <img className="zoom-in" src={MapControls.zoomIn} alt="zoomIn" />
-        </button>
-      </MapControl>
-      <MapControl position={ControlPosition.BOTTOM_LEFT}>
-        <button onClick={zoomOut}>
-          <img className="zoom-out" src={MapControls.zoomOut} alt="zoomOut" />
-        </button>
-      </MapControl>
+
+      {!isMobile ? (
+        <>
+          <MapControl position={ControlPosition.BOTTOM_LEFT}>
+            <button onClick={zoomIn}>
+              <img className="zoom-in" src={MapControls.zoomIn} alt="zoomIn" />
+            </button>
+          </MapControl>
+          <MapControl position={ControlPosition.BOTTOM_LEFT}>
+            <button onClick={zoomOut}>
+              <img
+                className="zoom-out"
+                src={MapControls.zoomOut}
+                alt="zoomOut"
+              />
+            </button>
+          </MapControl>
+        </>
+      ) : null}
     </div>
   );
 };
