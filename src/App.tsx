@@ -11,8 +11,8 @@ const App: FC = () => {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/playgrounds/:id" element={<PgPage />} />
         <Route path="/" element={<MainPage />} />
+        <Route path="/:title" element={<PgPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />

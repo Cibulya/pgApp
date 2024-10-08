@@ -6,7 +6,7 @@ import {
   ListsData,
 } from '../../text-mocks/footer-mocks/footer-mocks';
 
-const FooterLinks: FC<ListsData> = (lists: ListsData) => {
+const FooterLinks: FC<ListsData> = lists => {
   return (
     <nav className="footer-nav">
       {lists.lists.map((list: FooterLink) => {

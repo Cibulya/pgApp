@@ -7,6 +7,7 @@ export interface Playground {
   owner_id: number;
   title: string;
   image: string;
+  imageBig: string;
   url: string;
   address: string;
   discription: string;

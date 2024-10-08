@@ -3,8 +3,9 @@ import { PGPick } from '../playgrounds/playgrounds';
 import copyIcon from '../../assets/icons/copy.svg';
 
 import './marker.scss';
+import { FC } from 'react';
 
-const CustomInfoWindow = (pg: PGPick) => {
+const CustomInfoWindow: FC<PGPick> = pg => {
   return (
     <div className="pg-list-li">
       <button className="pg-list-li-copy" type="button">

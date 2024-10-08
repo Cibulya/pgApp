@@ -1,21 +1,15 @@
 import './playgrounds.scss';
 import PgList from '../pg-list/pg-list';
 import { Playground } from '../../interfaces/playground';
-import { useState } from 'react';
+import { FC, useState } from 'react';
+import { ArrowImages } from '../../text-mocks/playgrounds-security-section';
 
 export type PGPick = Pick<
   Playground,
   'title' | 'features' | 'address' | 'image' | 'id'
 >;
 
-const enum ArrowImages {
-  left = 'https://raw.githubusercontent.com/Cibulya/pgApp/refs/heads/map-feature/src/assets/icons/left.svg',
-  right = 'https://raw.githubusercontent.com/Cibulya/pgApp/6e33e29b26666723384d90f09f10116950c5a196/src/assets/icons/right.svg',
-  up = 'https://raw.githubusercontent.com/Cibulya/pgApp/6e33e29b26666723384d90f09f10116950c5a196/src/assets/icons/top.svg',
-  down = 'https://raw.githubusercontent.com/Cibulya/pgApp/6e33e29b26666723384d90f09f10116950c5a196/src/assets/icons/arrow-down.svg',
-}
-
-const PlayGroundsComponent = () => {
+const PlayGroundsComponent: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(true);
 
   return (

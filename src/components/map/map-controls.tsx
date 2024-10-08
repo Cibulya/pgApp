@@ -21,12 +21,8 @@ const CustomMapControls = () => {
   return (
     <div className="map-controls">
       <MapControl position={ControlPosition.BOTTOM_LEFT}>
-        <button onClick={center}>
-          <img
-            className="center"
-            src={MapControls.navToCenter}
-            alt="nav-to-center"
-          />
+        <button className="center" onClick={center}>
+          <img src={MapControls.navToCenter} alt="nav-to-center" />
         </button>
       </MapControl>
       <MapControl position={ControlPosition.BOTTOM_LEFT}>

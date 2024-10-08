@@ -5,6 +5,7 @@ import CustomInfoWindow from './info-window';
 import { useState } from 'react';
 import { useAppSelector } from '../../hooks/redux-hook';
 import { useNavigate } from 'react-router-dom';
+import { convertTitleToUrl } from '../../utils/convert-title-to-url';
 
 const Marker = (
   pin: Pick<
@@ -18,7 +19,7 @@ const Marker = (
   const navigate = useNavigate();
 
   const navigateTo = () => {
-    navigate(`/playgrounds/${pin.id}`);
+    navigate(`/${convertTitleToUrl(pin.title)}`);
   };
 
   return (

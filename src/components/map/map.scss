@@ -13,23 +13,28 @@
 .zoom-in {
   position: absolute;
   bottom: 40px;
+  border-radius: 50%;
+  transition: all 0.2s ease-out;
+  &:hover {
+    border: 2px solid grey;
+  }
 }
 
 .center {
-  margin-left: 15vh;
+  margin-left: 9vw;
 }
 .zoom-in {
-  margin-left: 21vh;
+  margin-left: 12vw;
 }
 
 .zoom-out {
-  margin-left: 27vh;
+  margin-left: 15vw;
 }
 
 .search-form-container {
   position: absolute;
   top: 10px;
-  left: 236px;
+  left: 13.34%;
   width: 415px;
   overflow: hidden;
 }
@@ -45,7 +50,7 @@
   font-family: "RobotoRegular";
   width: 415px;
   height: 46px;
-  background: white;
+  background: rgba(255, 255, 255, 0.79);
   border-radius: 8px;
   padding-left: 57px;
   padding-top: 14px;
