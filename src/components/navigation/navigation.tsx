@@ -1,5 +1,5 @@
 import './navigation.scss';
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useState } from 'react';
 import navIcon from '../../assets/icons/nav-bar-icon.svg';
 import { Link } from 'react-router-dom';
 import useOnclickOutside from 'react-cool-onclickoutside';

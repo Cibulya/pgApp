@@ -1,4 +1,4 @@
-import { Feature, Playground } from '../interfaces/playground';
+import { Playground } from '../interfaces/playground';
 
 export const pgMock: Playground[] = [
   {
@@ -235,32 +235,5 @@ export const pgMock: Playground[] = [
         img: 'https://raw.githubusercontent.com/Cibulya/pgApp/c6407219030b499faa64f4a29688d4d09aefaf6e/src/assets/pg-features/wheelchair.svg',
       },
     ],
-  },
-];
-
-const pgFeats: Feature[] = [
-  {
-    title: 'Pets allowed',
-    img: 'https://raw.githubusercontent.com/Cibulya/pgApp/c6407219030b499faa64f4a29688d4d09aefaf6e/src/assets/pg-features/dog.svg',
-  },
-  {
-    title: 'Camera',
-    img: 'https://raw.githubusercontent.com/Cibulya/pgApp/c6407219030b499faa64f4a29688d4d09aefaf6e/src/assets/pg-features/security-camera.svg',
-  },
-  {
-    title: 'Free wifi',
-    img: 'https://raw.githubusercontent.com/Cibulya/pgApp/c6407219030b499faa64f4a29688d4d09aefaf6e/src/assets/pg-features/wifi.svg',
-  },
-  {
-    title: 'Drinking water',
-    img: 'https://raw.githubusercontent.com/Cibulya/pgApp/c6407219030b499faa64f4a29688d4d09aefaf6e/src/assets/pg-features/drink.svg',
-  },
-  {
-    title: 'Parking',
-    img: 'https://raw.githubusercontent.com/Cibulya/pgApp/c6407219030b499faa64f4a29688d4d09aefaf6e/src/assets/pg-features/parking.svg',
-  },
-  {
-    title: 'ADA Complience',
-    img: 'https://raw.githubusercontent.com/Cibulya/pgApp/c6407219030b499faa64f4a29688d4d09aefaf6e/src/assets/pg-features/wheelchair.svg',
   },
 ];
