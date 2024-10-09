@@ -19,7 +19,7 @@ const MapComponent: FC = () => {
         mapId={MAP_ID}
         style={mapPresets.mapStyle}
         defaultCenter={mapPresets.center}
-        defaultZoom={15}
+        defaultZoom={14}
         disableDefaultUI={true}
         disableDoubleClickZoom={true}
       >

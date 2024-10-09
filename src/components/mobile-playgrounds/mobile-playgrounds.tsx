@@ -8,7 +8,7 @@ const MobilePlaygrounds: FC<PlaygroundsArray> = ({ playgrounds }) => {
   const [isOpen, setOpen] = useState<boolean>(false);
   return (
     <div
-      className={isOpen ? 'mobile-pg-container' : 'mobile-pg-container-active'}
+      className={!isOpen ? 'mobile-pg-container' : 'mobile-pg-container-active'}
     >
       <button
         className="mobile-pg-button"
@@ -18,11 +18,11 @@ const MobilePlaygrounds: FC<PlaygroundsArray> = ({ playgrounds }) => {
       >
         <img
           className="mobile-pg-image"
-          src={isOpen ? ArrowImages.up : ArrowImages.down}
+          src={isOpen ? ArrowImages.down : ArrowImages.up}
           alt="arrow"
         />
       </button>
-      <ul className="mobile-pg-list">
+      <ul className={isOpen ? 'mobile-pg-list-active' : 'mobile-pg-list'}>
         {playgrounds.map(playground => {
           return (
             <PgListLI

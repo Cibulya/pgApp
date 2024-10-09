@@ -8,7 +8,7 @@ const CustomMapControls: FC = () => {
   const isMobile = useMediaQuery({ query: mediaQuerias.phone });
   const map = useMap();
   const center = () => {
-    map?.setCenter(mapPresets.center);
+    map?.panTo(mapPresets.center);
   };
 
   const zoomIn = () => {
@@ -24,7 +24,7 @@ const CustomMapControls: FC = () => {
   return (
     <div className="map-controls">
       <MapControl position={ControlPosition.BOTTOM_LEFT}>
-        <button className="center" onClick={center}>
+        <button id={!isMobile ? 'center' : 'center-mobile'} onClick={center}>
           <img src={MapControls.navToCenter} alt="nav-to-center" />
         </button>
       </MapControl>
@@ -33,16 +33,12 @@ const CustomMapControls: FC = () => {
         <>
           <MapControl position={ControlPosition.BOTTOM_LEFT}>
             <button onClick={zoomIn}>
-              <img className="zoom-in" src={MapControls.zoomIn} alt="zoomIn" />
+              <img id="zoom-in" src={MapControls.zoomIn} alt="zoomIn" />
             </button>
           </MapControl>
           <MapControl position={ControlPosition.BOTTOM_LEFT}>
             <button onClick={zoomOut}>
-              <img
-                className="zoom-out"
-                src={MapControls.zoomOut}
-                alt="zoomOut"
-              />
+              <img id="zoom-out" src={MapControls.zoomOut} alt="zoomOut" />
             </button>
           </MapControl>
         </>

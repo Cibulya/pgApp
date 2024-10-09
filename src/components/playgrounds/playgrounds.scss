@@ -1,24 +1,3 @@
-.pg-list-container {
-  display: flex;
-  overflow: hidden;
-  justify-content: center;
-  // @media (max-width: 640px) {
-  //   flex-direction: column;
-  //   border-top-left-radius: 10px;
-  //   border-top-right-radius: 10px;
-  //   border: 1px solid black;
-  // }
-}
-
-.pg-list {
-  overflow: auto;
-  height: 790px;
-  background-color: #fff;
-  &::-webkit-scrollbar {
-    width: 0;
-  }
-}
-
 .pg-list-li {
   display: flex;
   height: 141px;
@@ -27,7 +6,7 @@
   padding: 16px 24px;
   gap: 24px;
   position: relative;
-  z-index: 9999;
+  z-index: 12;
   cursor: pointer;
 }
 
@@ -55,12 +34,14 @@
   font-family: "Roboto";
   font-size: 16px;
   color: rgba(120, 120, 120, 1);
+  width: 265px;
 }
 
 .pg-list-li-features {
   display: flex;
   gap: 8px;
   align-items: center;
+  width: 446px;
 }
 
 .pg-list-li-image {
@@ -72,11 +53,68 @@
 .pg-hide-button {
   min-width: 40px;
   background-color: #ffffff;
-  height: 790px;
   @media (max-width: 640px) {
     flex-direction: column;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     height: 56px;
+  }
+}
+//////////////
+.desktop-pg-container-active {
+  display: flex;
+  background-color: rgba(255, 255, 255, 1);
+  animation: goingLeft 1s 1 ease;
+  position: absolute;
+  right: 0;
+  transform: translateX(0%);
+}
+
+@keyframes goingLeft {
+  0% {
+    transform: translateX(92.2%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.desktop-pg-container {
+  position: absolute;
+  display: flex;
+  background-color: rgba(255, 255, 255, 1);
+  right: 0;
+  transform: translateX(92.2%);
+  animation: goingRight 1s 1 ease;
+}
+@keyframes goingRight {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(92.2%);
+  }
+}
+
+.desktop-pg-button {
+  min-width: 40px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.desktop-pg-list {
+  height: 790px;
+  overflow: auto;
+  max-width: 440px;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.desktop-pg-list-active {
+  height: 790px;
+  overflow: auto;
+  max-width: 440px;
+  &::-webkit-scrollbar {
+    width: 0;
   }
 }

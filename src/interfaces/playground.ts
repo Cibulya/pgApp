@@ -32,3 +32,8 @@ export interface Position {
   lat: number;
   lng: number;
 }
+
+export type PGPick = Pick<
+  Playground,
+  'title' | 'features' | 'address' | 'image' | 'id'
+>;

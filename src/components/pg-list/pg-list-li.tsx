@@ -1,8 +1,9 @@
-import { PGPick } from '../playgrounds/playgrounds';
+import { PGPick } from '../../interfaces/playground';
 import PgFeatures from './gp-fetures';
 import copyIcon from '../../assets/icons/copy.svg';
+import { FC } from 'react';
 
-const PgListLI = (pgLi: PGPick) => {
+const PgListLI: FC<PGPick> = (pgLi: PGPick) => {
   return (
     <li className="pg-list-li">
       <button className="pg-list-li-copy" type="button">

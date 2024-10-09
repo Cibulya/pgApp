@@ -1,24 +1,34 @@
+import { FC, useState } from 'react';
 import PgListLI from './pg-list-li';
-import { useAppSelector } from '../../hooks/redux-hook';
+import { PlaygroundsArray } from '../../interfaces/playground';
+import { ArrowImages } from '../../text-mocks/playgrounds-security-section';
 
-const PgList = () => {
-  const pgData = useAppSelector(state => state.pgReducer.playgrounds);
-
+const PgList: FC<PlaygroundsArray> = ({ playgrounds }) => {
+  const [isOpen, setOpen] = useState<boolean>(false);
   return (
-    <ul className="pg-list">
-      {pgData.map(pg => {
-        return (
-          <PgListLI
-            key={pg.id}
-            title={pg.title}
-            features={pg.features}
-            address={pg.address}
-            image={pg.image}
-            id={pg.id}
-          />
-        );
-      })}
-    </ul>
+    <div
+      className={
+        isOpen ? 'desktop-pg-container' : 'desktop-pg-container-active'
+      }
+    >
+      <button onClick={() => setOpen(!isOpen)} className="desktop-pg-button">
+        <img src={isOpen ? ArrowImages.left : ArrowImages.right} alt="arrow" />
+      </button>
+      <ul className={isOpen ? 'desktop-pg-list' : 'desktop-pg-list-active'}>
+        {playgrounds.map(playground => {
+          return (
+            <PgListLI
+              key={playground.id}
+              title={playground.title}
+              features={playground.features}
+              address={playground.address}
+              image={playground.image}
+              id={playground.id}
+            />
+          );
+        })}
+      </ul>
+    </div>
   );
 };
 
