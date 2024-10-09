@@ -7,11 +7,7 @@ import { useAppSelector } from '../../hooks/redux-hook';
 import { useNavigate } from 'react-router-dom';
 import { convertTitleToUrl } from '../../utils/convert-title-to-url';
 import { markerStyles, pinStyles } from '../../constants/map-constants';
-
-type MarkerProps = Pick<
-  Playground,
-  'gps' | 'id' | 'address' | 'image' | 'title' | 'features'
->;
+import { MarkerProps } from '../../interfaces/marker-interface';
 
 const Marker: FC<MarkerProps> = (pin: MarkerProps) => {
   const [open, setOpen] = useState<boolean>(false);

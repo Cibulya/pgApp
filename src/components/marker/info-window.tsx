@@ -1,5 +1,5 @@
 import PgFeatures from '../pg-list/gp-fetures';
-import { PGPick } from '../playgrounds/playgrounds';
+import { PGPick } from '../../interfaces/playground';
 import copyIcon from '../../assets/icons/copy.svg';
 
 import './marker.scss';

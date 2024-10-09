@@ -19,9 +19,10 @@ const MapComponent: FC = () => {
         mapId={MAP_ID}
         style={mapPresets.mapStyle}
         defaultCenter={mapPresets.center}
-        defaultZoom={14}
+        defaultZoom={15}
         disableDefaultUI={true}
         disableDoubleClickZoom={true}
+        zoomControl={false}
       >
         {pins.map(pin => (
           <Marker

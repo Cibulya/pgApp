@@ -1,0 +1,86 @@
+.nav-container {
+  position: relative;
+}
+
+.nav-menu {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 1);
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  padding: 26px 43px 0px 36px;
+  gap: 7px;
+  transform: translateX(-100%);
+  animation: hideMenu 1s 1 ease-out;
+}
+
+@keyframes hideMenu {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.nav-menu-active {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 1);
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  padding: 26px 43px 0px 36px;
+  gap: 7px;
+  transform: translateX(0);
+  animation: showMenu 1s 1 ease-out;
+  z-index: 100;
+}
+
+@keyframes showMenu {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.nav-heading {
+  margin-bottom: 7px;
+}
+.nav-link {
+  height: 33px;
+  cursor: pointer;
+  font-family: "DINCondensedBold";
+  font-weight: 600;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  padding-left: 23px;
+}
+
+.nav-list-link {
+  height: 33px;
+  font-family: "DINCondensedLight";
+  font-weight: 300;
+}
+
+.nav-link,
+.nav-list-link {
+  transition: all 0.5s ease-out;
+  &:hover {
+    color: rgba(19, 99, 192, 1);
+  }
+}

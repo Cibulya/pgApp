@@ -20,8 +20,8 @@ export const securityFeatures: SecurityText[] = [
 ];
 
 export const enum ArrowImages {
-  left = 'https://raw.githubusercontent.com/Cibulya/pgApp/refs/heads/map-feature/src/assets/icons/left.svg',
-  right = 'https://raw.githubusercontent.com/Cibulya/pgApp/69da1df0b8d94b61a22c1e354d06e47f92cf41d5/src/assets/icons/right.svg',
+  right = 'https://raw.githubusercontent.com/Cibulya/pgApp/b95e98fcae7a2d13599efcfe19114134ef566be7/src/assets/icons/left.svg',
+  left = 'https://raw.githubusercontent.com/Cibulya/pgApp/69da1df0b8d94b61a22c1e354d06e47f92cf41d5/src/assets/icons/right.svg',
   up = 'https://raw.githubusercontent.com/Cibulya/pgApp/ae80758f4965d90823ce96f66508d413e1bc3b99/src/assets/icons/top.svg',
   down = 'https://raw.githubusercontent.com/Cibulya/pgApp/ae80758f4965d90823ce96f66508d413e1bc3b99/src/assets/icons/down.svg',
 }
