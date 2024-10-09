@@ -2,21 +2,23 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  height: 56px;
+
   background-color: #fff;
   z-index: 1;
   bottom: 0px;
+  transform: translateY(94%);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   animation: goingBottom 1s 1 ease;
+  width: 100%;
 }
 
 @keyframes goingBottom {
   0% {
-    height: 85vh;
+    transform: translateY(60%);
   }
   100% {
-    height: 56px;
+    transform: translateY(94%);
   }
 }
 
@@ -24,22 +26,22 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  height: 56px;
   background-color: #fff;
-  height: 85vh;
   z-index: 10;
-  top: 90px;
+  transform: translateY(33%);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   animation: goingTop 1s 1 ease;
+  width: 100%;
+  bottom: 0;
 }
 
 @keyframes goingTop {
   0% {
-    top: 825px;
+    transform: translateY(94%);
   }
   100% {
-    top: 80px;
+    transform: translateY(33%);
   }
 }
 
