@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-
   background-color: #fff;
   z-index: 1;
   bottom: 0px;
@@ -27,13 +26,14 @@
   flex-direction: column;
   position: absolute;
   background-color: #fff;
-  z-index: 10;
-  transform: translateY(33%);
+  z-index: 1;
+  transform: translateY(10%);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   animation: goingTop 1s 1 ease;
-  width: 100%;
   bottom: 0;
+  height: 620px;
+  width: 100%;
 }
 
 @keyframes goingTop {
@@ -41,14 +41,16 @@
     transform: translateY(94%);
   }
   100% {
-    transform: translateY(33%);
+    transform: translateY(10%);
   }
 }
 
 .mobile-pg-button {
   min-height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(255, 255, 255, 1);
-  min-width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -56,9 +58,7 @@
 .mobile-pg-list {
   opacity: 1;
   background-color: #fff;
-  min-height: inherit;
   overflow: auto;
-  z-index: 100000;
   &::-webkit-scrollbar {
     width: 0;
   }
@@ -67,8 +67,9 @@
 .mobile-pg-list-active {
   opacity: 1;
   background-color: #fff;
-  min-height: inherit;
+  min-height: 600px;
   overflow: auto;
+  max-width: 100%;
   &::-webkit-scrollbar {
     width: 0;
   }

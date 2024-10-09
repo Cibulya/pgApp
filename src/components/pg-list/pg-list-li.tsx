@@ -16,7 +16,6 @@ const PgListLI: FC<PGPick> = (pgLi: PGPick) => {
       <button className="pg-list-li-copy" type="button">
         <img src={copyIcon} alt="copy-icon" />
       </button>
-
       <img className="pg-list-li-image" src={pgLi.image} alt={pgLi.title} />
       <div className="pg-list-li-info">
         <p onClick={navigateTo} className="pg-list-li-title">
