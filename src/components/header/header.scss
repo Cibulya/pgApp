@@ -1,0 +1,70 @@
+.booking-btn {
+  background-color: rgba(195, 8, 115, 1);
+  font-size: 18px;
+  text-align: center;
+  flex: 1;
+  min-width: 101px;
+  height: 36px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s ease-out;
+  &:hover {
+    background-color: rgba(28, 28, 28, 1);
+  }
+}
+
+.pricing-btn {
+  background-color: rgba(189, 189, 189, 1);
+  font-size: 18px;
+  text-align: center;
+  flex: 1;
+  min-width: 66px;
+  height: 36px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s ease-out;
+  &:hover {
+    background-color: rgba(28, 28, 28, 1);
+  }
+}
+.header {
+  background-color: rgba(240, 240, 240, 0.96);
+  font-family: "DINCondensedBOLD";
+  min-height: 92px;
+  padding: 0px 10px 0px 10px;
+  display: flex;
+}
+
+.header-content-container {
+  flex: 1 0;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 1);
+}
+
+.logo-navigation {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.form-pricing {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.pricing-booking {
+  display: flex;
+  gap: 17px;
+  flex: 1 1;
+  justify-content: center;
+  align-items: center;
+}

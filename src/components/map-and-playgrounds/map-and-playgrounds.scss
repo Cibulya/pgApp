@@ -1,0 +1,14 @@
+.maps-playgrounds {
+  flex: 1 1 auto;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  min-height: 790px;
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
+}
+
+li {
+  list-style: none;
+}

@@ -1,0 +1,120 @@
+.pg-list-li {
+  display: flex;
+  height: 141px;
+  border: 0.5px solid rgba(196, 196, 196, 0.3);
+  align-items: center;
+  padding: 16px 24px;
+  gap: 24px;
+  position: relative;
+  z-index: 12;
+  cursor: pointer;
+}
+
+.pg-list-li-copy {
+  position: absolute;
+  right: 24px;
+  top: 20px;
+  background-color: transparent;
+  &:hover {
+    border: 0.5px solid rgba(196, 196, 196, 0.3);
+  }
+}
+
+.pg-list-li-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pg-list-li-title {
+  font-family: "DINCondensedBold";
+  font-size: 26px;
+}
+.pg-list-li-addres {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: rgba(120, 120, 120, 1);
+  width: 265px;
+}
+
+.pg-list-li-features {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: 446px;
+}
+
+.pg-list-li-image {
+  width: 103px;
+  height: 107px;
+  border-radius: 8px;
+}
+
+.pg-hide-button {
+  min-width: 40px;
+  background-color: #ffffff;
+  @media (max-width: 640px) {
+    flex-direction: column;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 56px;
+  }
+}
+//////////////
+.desktop-pg-container-active {
+  display: flex;
+  background-color: rgba(255, 255, 255, 1);
+  animation: goingLeft 1s 1 ease;
+  position: absolute;
+  right: 0;
+  transform: translateX(0%);
+}
+
+@keyframes goingLeft {
+  0% {
+    transform: translateX(92.2%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.desktop-pg-container {
+  position: absolute;
+  display: flex;
+  background-color: rgba(255, 255, 255, 1);
+  right: 0;
+  transform: translateX(92.2%);
+  animation: goingRight 1s 1 ease;
+}
+@keyframes goingRight {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(92.2%);
+  }
+}
+
+.desktop-pg-button {
+  min-width: 40px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.desktop-pg-list {
+  height: 790px;
+  overflow: auto;
+  max-width: 440px;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.desktop-pg-list-active {
+  height: 790px;
+  overflow: auto;
+  max-width: 440px;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}

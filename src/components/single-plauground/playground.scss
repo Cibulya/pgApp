@@ -1,0 +1,200 @@
+.wrapper {
+  flex: 1 0 auto;
+  overflow-x: hidden;
+}
+
+.single-pg-page {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1200px;
+  flex: 1 0 auto;
+
+  @media (max-width: 1440px) {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+//common info
+.common-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 24px;
+}
+
+.common-info-heading {
+  font-family: "DINCondensedBold";
+  font-size: 48px;
+  text-align: left;
+  @media (max-width: 640px) {
+    text-align: center;
+  }
+}
+
+.common-info-address {
+  font-family: "RobotoRegular";
+  font-size: 16px;
+  color: rgba(120, 120, 120, 1);
+  @media (max-width: 640px) {
+    text-align: center;
+  }
+}
+
+.common-info-image {
+  width: 100%;
+  border-radius: 8px;
+  @media (max-width: 640px) {
+    height: 291px;
+  }
+}
+
+.common-info-discription {
+  font-family: "RobotoRegular";
+  font-size: 14px;
+  line-height: 27px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+// features
+.features-title {
+  font-family: "DINCondensedBold";
+  font-size: 26px;
+  @media (max-width: 640px) {
+    text-align: center;
+  }
+}
+.features-security {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  overflow: visible;
+  padding: 42px 0;
+  &::after {
+    content: "";
+    position: absolute;
+    left: -50%;
+    bottom: 0;
+    width: 190%;
+    height: 100%;
+    background-color: rgba(213, 212, 212, 0.2);
+    z-index: -1;
+  }
+}
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.features-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 42px;
+}
+.feature-container {
+  font-family: "DINCondensedBold";
+  display: flex;
+  gap: 16px;
+  text-align: left;
+  @media (max-width: 640px) {
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: center;
+    height: fit-content;
+  }
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(120, 120, 120, 1);
+  padding: 15px 20px;
+  border-radius: 5px;
+}
+.feature-image {
+}
+.feature-title {
+  color: rgba(120, 120, 120, 1);
+}
+
+//security inspection
+.security-section {
+  display: flex;
+  justify-content: left;
+  align-items: start;
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+.security-inspection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inspection-tittle {
+  font-family: "DINCondensedBold";
+  font-size: 26px;
+  @media (max-width: 640px) {
+    text-align: center;
+  }
+}
+
+.ispection-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 16px;
+  @media (max-width: 640px) {
+    justify-content: center;
+    column-gap: 10px;
+  }
+  @media (max-width: 360px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.ispection-list-li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ispection-list-li-image {
+}
+
+.ispection-list-li-text {
+  font-family: "RobotoRegular";
+  font-size: 16px;
+}
+
+.security-cert {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.security-cert-heading {
+  font-family: "DINCondensedBold";
+  font-size: 26px;
+  @media (max-width: 640px) {
+    text-align: center;
+  }
+}
+.cert-list {
+  display: flex;
+  gap: 32px;
+  @media (max-width: 360px) {
+    flex-direction: column;
+  }
+}
+.cert-list-li {
+}
