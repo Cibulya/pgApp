@@ -1,7 +1,6 @@
 import PgFeatures from '../pg-list/gp-fetures';
 import { PGPick } from '../../interfaces/playground';
 import copyIcon from '../../assets/icons/copy.svg';
-
 import './marker.scss';
 import { FC } from 'react';
 

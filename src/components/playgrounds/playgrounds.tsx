@@ -7,7 +7,7 @@ import { mediaQuerias } from '../../constants/mediaquerias';
 import { useAppSelector } from '../../hooks/redux-hook';
 
 const PlayGroundsComponent: FC = () => {
-  const isMobile = useMediaQuery({ query: mediaQuerias.phone });
+  const isMobile = useMediaQuery({ query: mediaQuerias.tablet });
   const pgArr = useAppSelector(state => state.pgReducer.playgrounds);
 
   return (

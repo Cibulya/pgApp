@@ -12,7 +12,7 @@ export const markerStyles: MarkerStyles = {
   backgroundColor: 'white',
   border: '0.5px solid rgba(196, 196, 196, 0.3)',
   borderRadius: '8px',
-  width: '440px',
+  width: '400px',
   transform: 'translateY(-60px)',
   cursor: 'pointer',
   zIndex: '100',

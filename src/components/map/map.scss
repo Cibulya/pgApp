@@ -1,13 +1,12 @@
 .map {
   width: 100%;
-  height: 100%;
+  height: 790px;
   position: relative;
   @media (max-width: 640px) {
-    height: 880px;
   }
 }
 
-.map-controls {
+#map-controls {
   position: relative;
 }
 
@@ -28,28 +27,28 @@
   position: absolute;
   bottom: 40px;
   left: 232px;
-  @media (max-width: 1024px) {
+  @media (max-width: 1400px) {
     left: 0px;
   }
 }
 
 #center-mobile {
   position: absolute;
-  bottom: 101px;
+  bottom: 70px;
   left: -50px;
   border-radius: 50%;
 }
 
 #zoom-in {
   left: 288px;
-  @media (max-width: 1024px) {
+  @media (max-width: 1400px) {
     left: 60px;
   }
 }
 
 #zoom-out {
   left: 344px;
-  @media (max-width: 1024px) {
+  @media (max-width: 1400px) {
     left: 120px;
   }
 }
@@ -66,12 +65,17 @@
     max-width: 415px;
     margin: 0 auto;
   }
+
   @media (max-width: 992px) {
     width: 350px;
     left: 0px;
   }
   @media (max-width: 1100px) {
     left: 20px;
+  }
+  @media (max-width: 480px) {
+    left: 0;
+    width: 320px;
   }
 }
 .search-form {
@@ -81,7 +85,7 @@
 .search-form-input {
   font-size: 16px;
   font-family: "RobotoRegular";
-  width: 415px;
+  width: 100%;
   height: 46px;
   background: rgba(255, 255, 255, 0.91);
   border-radius: 8px;

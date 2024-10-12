@@ -7,5 +7,5 @@ interface MediaQuerias {
 export const mediaQuerias: MediaQuerias = {
   phone: '(max-width:640px)',
   desktop: '(min-width:1024px)',
-  tablet: '(max:width:992px)',
+  tablet: '(max-width:992px)',
 };

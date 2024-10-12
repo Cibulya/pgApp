@@ -30,20 +30,28 @@
 
 .nav-menu-active {
   position: absolute;
-  top: 0;
+  top: 92px;
   bottom: 0;
-  left: 0;
+  left: -5px;
   background-color: #fff;
   color: rgba(0, 0, 0, 1);
   font-size: 18px;
   display: flex;
   flex-direction: column;
   width: 320px;
-  padding: 26px 43px 0px 36px;
+  height: fit-content;
+  padding: 26px 43px 26px 36px;
   gap: 7px;
   transform: translateX(0);
   animation: showMenu 1s 1 ease-out;
   z-index: 100;
+  border-radius: 10px;
+  -webkit-box-shadow: 6px 2px 20px -9px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 6px 2px 20px -9px rgba(66, 68, 90, 1);
+  box-shadow: 6px 2px 20px -9px rgba(66, 68, 90, 1);
+  @media (max-width: 640px) {
+    width: 260px;
+  }
 }
 
 @keyframes showMenu {

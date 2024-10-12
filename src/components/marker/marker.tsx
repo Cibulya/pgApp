@@ -8,12 +8,20 @@ import { useNavigate } from 'react-router-dom';
 import { convertTitleToUrl } from '../../utils/convert-title-to-url';
 import { markerStyles, pinStyles } from '../../constants/map-constants';
 import { MarkerProps } from '../../interfaces/marker-interface';
+import useOnclickOutside from 'react-cool-onclickoutside';
 
 const Marker: FC<MarkerProps> = (pin: MarkerProps) => {
   const [open, setOpen] = useState<boolean>(false);
   const pgData = useAppSelector(state => state.pgReducer.playgrounds);
   const singlePG = pgData.find(e => e.id === pin.id) as unknown as Playground;
   const navigate = useNavigate();
+  const ref = useOnclickOutside(() => {
+    setOpen(false);
+  });
+
+  const handleClickBtn = () => {
+    setOpen(!open);
+  };
 
   const navigateTo = () => {
     navigate(`/${convertTitleToUrl(pin.title)}`);
@@ -21,7 +29,7 @@ const Marker: FC<MarkerProps> = (pin: MarkerProps) => {
 
   return (
     <>
-      <AdvancedMarker onClick={() => setOpen(!open)} position={pin.gps}>
+      <AdvancedMarker onClick={handleClickBtn} position={pin.gps}>
         <Pin
           background={pinStyles.background}
           borderColor={pinStyles.borderColor}
@@ -35,7 +43,7 @@ const Marker: FC<MarkerProps> = (pin: MarkerProps) => {
             onClick={navigateTo}
             position={pin.gps}
           >
-            <div>
+            <div ref={ref}>
               <CustomInfoWindow
                 id={singlePG.id}
                 address={singlePG.address}

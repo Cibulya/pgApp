@@ -34,14 +34,13 @@
   font-family: "Roboto";
   font-size: 16px;
   color: rgba(120, 120, 120, 1);
-  width: 265px;
+  max-width: 265px;
 }
 
 .pg-list-li-features {
   display: flex;
   gap: 8px;
   align-items: center;
-  width: 446px;
 }
 
 .pg-list-li-image {

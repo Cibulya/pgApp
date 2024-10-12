@@ -4,8 +4,9 @@
   position: relative;
   overflow: hidden;
   min-height: 790px;
-  @media (max-width: 640px) {
+  @media (max-width: 992px) {
     flex-direction: column;
+    height: 790px;
   }
 }
 
