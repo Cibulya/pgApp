@@ -7,6 +7,7 @@ import { mediaQuerias } from '../../constants/mediaquerias';
 const CustomMapControls: FC = () => {
   const isMobile = useMediaQuery({ query: mediaQuerias.tablet });
   const map = useMap();
+
   const center = () => {
     map?.panTo(mapPresets.center);
   };
