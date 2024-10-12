@@ -1,5 +1,5 @@
 import './marker.scss';
-import { AdvancedMarker, Pin } from '@vis.gl/react-google-maps';
+import { AdvancedMarker, Pin, useMap } from '@vis.gl/react-google-maps';
 import { Playground } from '../../interfaces/playground';
 import CustomInfoWindow from './info-window';
 import { FC, useState } from 'react';
@@ -15,12 +15,14 @@ const Marker: FC<MarkerProps> = (pin: MarkerProps) => {
   const pgData = useAppSelector(state => state.pgReducer.playgrounds);
   const singlePG = pgData.find(e => e.id === pin.id) as unknown as Playground;
   const navigate = useNavigate();
+  const map = useMap();
   const ref = useOnclickOutside(() => {
     setOpen(false);
   });
 
   const handleClickBtn = () => {
     setOpen(!open);
+    map?.panTo(pin.gps);
   };
 
   const navigateTo = () => {

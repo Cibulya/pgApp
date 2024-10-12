@@ -54,7 +54,7 @@ const IssueForm: FC = () => {
     }
   };
 
-  const formData: SubmitHandler<IssueFormFields> = data => console.log(data);
+  const formData: SubmitHandler<IssueFormFields> = data => data;
 
   return (
     <div className="issue-form-container">
