@@ -5,7 +5,7 @@ import { useMediaQuery } from 'react-responsive';
 import { mediaQuerias } from '../../constants/mediaquerias';
 
 const CustomMapControls: FC = () => {
-  const isMobile = useMediaQuery({ query: mediaQuerias.phone });
+  const isMobile = useMediaQuery({ query: mediaQuerias.tablet });
   const map = useMap();
   const center = () => {
     map?.panTo(mapPresets.center);
@@ -22,13 +22,12 @@ const CustomMapControls: FC = () => {
   };
 
   return (
-    <div className="map-controls">
+    <div id="map-controls">
       <MapControl position={ControlPosition.BOTTOM_LEFT}>
         <button id={!isMobile ? 'center' : 'center-mobile'} onClick={center}>
           <img src={MapControls.navToCenter} alt="nav-to-center" />
         </button>
       </MapControl>
-
       {!isMobile ? (
         <>
           <MapControl position={ControlPosition.BOTTOM_LEFT}>

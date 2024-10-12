@@ -1,11 +1,12 @@
 import './navigation.scss';
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import navIcon from '../../assets/icons/nav-bar-icon.svg';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import useOnclickOutside from 'react-cool-onclickoutside';
 
 const Navigation: FC = () => {
   const [active, setActive] = useState<boolean>(false);
+  const location = useLocation();
   const ref = useOnclickOutside(() => {
     setActive(false);
   });
@@ -13,6 +14,10 @@ const Navigation: FC = () => {
   const handleClickBtn = () => {
     setActive(!active);
   };
+
+  useEffect(() => {
+    setActive(false);
+  }, [location]);
 
   return (
     <div className="nav-container-active">

@@ -3,6 +3,7 @@ import type { PayloadAction } from '@reduxjs/toolkit';
 import type { RootState } from '../store/store';
 import { Playground } from '../../interfaces/playground';
 import { pgMock } from '../../text-mocks/playgrounds-mocks';
+import { filteredPgArray } from '../../utils/searchElements';
 
 interface PgAppStore {
   playgrounds: Playground[];
@@ -18,11 +19,7 @@ export const playgroundsSlice = createSlice({
   reducers: {
     findPlaygrouns: (state, action: PayloadAction<string>) => {
       const pgData: Playground[] = pgMock;
-      const findedData = pgData.filter(
-        e =>
-          e.title.toLowerCase().includes(action.payload.toLowerCase()) ||
-          e.address.toLowerCase().includes(action.payload.toLowerCase())
-      );
+      const findedData = filteredPgArray(action.payload, pgData);
       state.playgrounds = findedData;
     },
   },

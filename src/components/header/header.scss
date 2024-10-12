@@ -34,8 +34,6 @@
 .header {
   background-color: rgba(240, 240, 240, 0.96);
   font-family: "DINCondensedBOLD";
-  min-height: 92px;
-  padding: 0px 10px 0px 10px;
   display: flex;
 }
 
@@ -44,6 +42,8 @@
   max-width: 1170px;
   margin: 0 auto;
   display: flex;
+  height: 92px;
+  padding: 0px 10px 0px 10px;
   align-items: center;
   justify-content: space-between;
   color: rgba(255, 255, 255, 1);
